@@ -1,66 +1,116 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Trans Logistics Web App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Overview
 
-## About Laravel
+Welcome to the Trans Logistics web application! This platform is designed to streamline freight forwarding and transport consultancy services across Southern Africa, focusing on Zimbabwe and the SADC region. The mission is to facilitate the transportation of goods and assist transport operators in managing their businesses effectively.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Robust Backend Framework**: Built with Laravel
+- **Dyanamic User Interactions**: Powered by Livewire.
+- **User-Friendly Interface**: Built with Tailwind CSS for a responsive and intuitive user experience.
+- **Lightweight and Responsive UI Elements**: Enhanced with AlpineJs.
+- **Reliable Data Storage and Retrieval**: Managed by MySQL database.
+- **Content Management System (CMS)**: Manage content easily and efficiently.
+- **Chat Application**: Real-time communication between users for seamless coordination.
+- **Notification System**: Keep users informed about important updates and activities.
+- **User Authentication**: Secure login and registration for all users.
+- **Authorization Levels**: Different access levels for shippers, carriers, and admins (procurement associate, marketing associate, operations executive, director and system admin) to ensure proper role management.
+- **User Profile Management**: Display and edit user profile details such as contact info, passwords etc
+- **User Management**: Assign roles, edit, suspend and reset accounts
+- **Search Functionality**: Easily find required information
+- **Download / Upload Documents**: Reliable and secure file transfer for important documents
+- **Automated Testing**: Comprehensive tests to ensure the reliability and functionality of the application.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Shipper Dashboard**: 
+- Total Shipments: a quick summary of total shipments sent, in transit and delivered.
+- Pending Requests: number of shipments requests awaiting approval.
+- Available Vehicles Full Details
+- Create new shipment: a form to enter details for new shipments (origin, destination, cargo type, weight, pick up date, contact person, budget in full or rate of carriage, etc).
+- Download / Upload Documents: Ability to download agreements, invoices, and shipment-related documents as well as upload signed forms.
+- Notifications: include alerts for new load assignments, update from brokers and messages regarding shipment status.
+- Load Matching: a feature to search for available return loads based on current shipment routes and a button to click preffered carrier.
+- Search and Filter Vehicles: List of vehicles by trailer, name, origin, destination, cost, status.
 
-## Learning Laravel
+- **Carrier Dashboard**: 
+- Total Shipments: a quick summary of loads currently assigned to the carrier, in progress and completed.
+- Pending Requests: number of shipments requests awaiting acceptance or action.
+- Available Loads Full details: Access posted list of loads that are available for assignment including details like origin, destination, cargo type, quantity, deadlines etc
+- Accept or Decline load assignment based on availability and capacity.
+- Bid: Optionally make bids with price offers / rate of carriage, to transport the available consignment(s).
+- Post Vehicles: Post details of own available vehicles (current location, route, trailer type, carriage rate etc).
+- Incident Reports: Fill in a form to immediately report any incidents encountered during transit.
+- Download / Upload Documents: Upload necessary documents such as delivery receipts, invoices and compliance documents. Download contracts, agreements and guidelines. 
+- Notifications: include alerts for shipment status changes, new messages, requests that need attention, automated reminders for upcoming shipments or renewals.
+-  Update shipment tracking: location, status (in transit, delivered) and estimated time of arrival.
+- Search and Filter Loads: List of Consignments by category, name, origin, destination, cost, status
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Marketing Associate Dashboard**: 
+- Total Registered Shippers: Display the total number of shippers registered by the associate
+- Pending Invoices: Overview of invoices awaiting payment from respective clients.
+- Register Shippers: Fill in a form with shipper details.
+- Create new Shipment: a form to enter details for new shipments (origin, destination, cargo type, weight, pick up date, contact person, budget in full or rate of carriage, etc) for Shippers that the associate registered.
+- Create Invoices: Functionality to generate and send invoices to clients based on contracted services.
+- Invoice History: Overview of all invoices issued, including statuses (pending, paid, overdue) for associated shippers.
+- Payment Tracking: Track payments received and outstanding balances for each client.
+- Mark invoices as paid, when payment is done.
+- Feedback Management: Fill in form to collect and track client feedback and satisfaction ratings.
+- Download / Upload Documents: Upload necessary documents such as invoices and compliance documents. Download contracts, agreements and guidelines. 
+- Notifications: include alerts for invoices that have not yet been paid, messages from clients, delivered consignments
+- Shipper Details: Access detailed profiles for each shipper that the asscociate registered, including contact information, service history, and invoice details.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **Procurement Associate Dashboard**: 
+- Total Registered Carriers: Display the total number of carriers registered by the associate
+- Incomplete Carrier Registration: number of carriers that the associate registered whose details are not yet complete
+- Truck Availability Summary: Overview of available trucks for the carriers registrered by the associate and their statuses.
+- Register New Carriers: Form to input details for registering a new carrier, including trade name, directors, trade reference, contacts and company documents.
+- View Registered Carriers: List of all carriers registered by the associate with search and filter options.
+- Edit Carrier Information: Ability to update details for registered carriers by the procurement associate
+- Post Availability of Truck: Post details of available vehicles for carriers registered by the associate (current location, route, trailer type, carriage rate, capacity, available dates etc)
+- Download / Upload Documents: Upload necessary documents such as contracts, carrier company profiles, invoices and compliance documents. Download carrier contract forms, load confirmation form, agreements and guidelines. 
+- Notifications: include alerts for new invoices received, truck availability updates and messages from carriers.
+-  Update shipment tracking: location, status (in transit, delivered) and estimated time of arrival.
+- View Incident Reports: View incident reports from carriers on any issues during transit.
+- Process Payments: Functionality to mark invoices as processed including options to add notes for the operations and accounts departments.
+ 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Operations Executive Dashboard**: 
+- Total Available Loads: Summary of all available loads recieved from the Marketing Associate
+- Total Available Trucks: Overview of the trucks provided by the Procurement Associate.
+- Pending Invoices: Number of invoices awaiting payment from clients
+- Register New Carriers: Form to input details for registering a new carrier, including trade name, directors, trade reference, contacts and company documents.
+- View Registered Carriers: List of all carriers registered by the associate with search and filter options.
+- Edit Carrier Information: Ability to update details for registered carriers by the associate
+- Post Availability of Truck: Post details of  available vehicles (current location, route, trailer type, carriage rate, capacity, available dates etc)
+- Download / Upload Documents: Upload necessary documents such as contracts, carrier company profiles, invoices and compliance documents. Download carrier contract forms, load confirmation form, agreements and guidelines. 
+- Notifications: include alerts for new invoices received, truck availability updates and messages from carriers.
+-  Update shipment tracking: location, status (in transit, delivered) and estimated time of arrival.
+- Process Payments: Functionality to mark invoices as processed including options to add notes for the operations and accounts departments.
+- NB: Won't access carriers with NO uploaded trucks. 
 
-## Laravel Sponsors
+- **Director Dashboard**
+- Total Revenue: Display total revenue generated within a specified period (weekly, monthly, yearly).
+- Total Loads Managed: Summary of all loads posted, awarded, and delivered during the reporting period.
+- Role and Access Control: Tools to manage user roles, permissions, and access levels for all brokers and associates.
+- Carrier Performance: On-time delivery rates, Incident reports or complaints, Average time to complete loads
+- Broker Performance: Number of loads managed by each broker, Revenue generated per broker, Client satisfaction ratings
+- Financial Metrics: Average time to payment from shippers, Overall operational costs vs. revenue
+- Load Status Overview: Visual representation of loads in different stages (e.g., posted, awarded, in transit, delivered) with trends over time.
+- Client Revenue Contribution: Breakdown of revenue by client, highlighting top-performing clients and those with overdue payments.
+- Client Feedback and Satisfaction: Overview of client satisfaction ratings and feedback trends to identify areas for improvement.
+- Invoice Status Dashboard: Summary of all invoices, categorized by status (pending, paid, overdue), with drill-down capabilities for detailed views.
+- Payment Trends: Analysis of payment timelines to identify patterns, delays, or issues with specific clients.
+- Process Efficiency: Metrics on the time taken for each stage of the load management process, from posting to payment.
+- Incident and Resolution Tracking: Overview of incidents reported (e.g., delays, damages) and the time taken to resolve these issues.
+- Notifications: include alerts for significant issues, such as high numbers of overdue invoices or performance drops in specific brokers or carriers.
+- Scheduled Reports: Options to set up automated reports to be sent via email at regular intervals (e.g., weekly performance summaries).
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
+## Technologies Used
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- **Laravel**: PHP framework for building web applications.
+- **Livewire Volt**: Framework for building dynamic interfaces without leaving the comfort of Laravel.
+- **Alpine Js**: A lightweight Javascript framework for adding interactivity to HTML
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **MySQL**: Database management system.
+- **PHPUnit**: For automated testing.
